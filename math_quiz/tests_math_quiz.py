@@ -12,17 +12,26 @@ class TestMathGame(unittest.TestCase):
             rand_num = create_random_number(min_val, max_val)
             self.assertTrue(min_val <= rand_num <= max_val)
 
+        min_val = 50
+        max_val = 100
         for _ in range(500):  # Test a medium number of random values
             rand_num = create_random_number(min_val, max_val)
             self.assertTrue(min_val <= rand_num <= max_val)
-
+            
+        min_val = 100
+        max_val = 400
         for _ in range(100):  # Test a small number of random values
             rand_num = create_random_number(min_val, max_val)
             self.assertTrue(min_val <= rand_num <= max_val)
         
+        min_val = 700
+        max_val = 2000
+
         for _ in range(50):  # Test a very small number of random values
             rand_num = create_random_number(min_val, max_val)
             self.assertTrue(min_val <= rand_num <= max_val)
+
+
 
     def test_create_random_choice(self):
         # Test if the choice is within the choices already stated in the function
